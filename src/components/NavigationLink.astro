@@ -9,6 +9,6 @@ export interface NavLink {
 const { title, label, url, ariaLabel } = Astro.props as NavLink;
 ---
 
-<a href={url} aria-label={ariaLabel || title} title={title}>
+<a href={url} aria-label={ariaLabel || title} title={title} data-astro-reload>
   {label}
 </a>
