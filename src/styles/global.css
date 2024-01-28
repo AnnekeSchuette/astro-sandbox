@@ -47,6 +47,7 @@ h1 {
 .hamburger {
   padding-right: 20px;
   cursor: pointer;
+  padding: 1rem;
 }
 
 .hamburger .line {
@@ -54,31 +55,23 @@ h1 {
   width: 40px;
   height: 5px;
   margin-bottom: 10px;
-  background-color: #ff9776;
+  background-color: #000000;
 }
 .mainnav {
-  top: 5rem;
-  background-color: #ff9776;
   display: none;
-  margin: 0;
+  padding: 0;
 
   &.expanded {
     display: unset;
   }
   ul {
     padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: #ff9776;
+
     li {
-      display: inline-flex;
-      flex-direction: column;
-      padding: 0 1rem;
-      border-right: 1px solid #888;
-      &:first-child {
-        padding-left: 0;
-      }
-      &:last-child {
-        padding-right: 0;
-        border-right: none;
-      }
+      width: 100%;
       a {
         display: block;
         text-align: center;
@@ -88,6 +81,10 @@ h1 {
         font-weight: bold;
         text-transform: uppercase;
       }
+      &:hover,
+      &:focus {
+        background-color: #f08868;
+      }
     }
   }
 }
@@ -95,12 +92,23 @@ h1 {
   .mainnav {
     display: block;
     position: static;
-    width: auto;
     background: none;
+    margin: 0 auto;
   }
 
-  .mainnav a {
-    display: inline-block;
+  .mainnav li {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    border-right: 1px solid #888;
+
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+      border-right: none;
+    }
   }
   .hamburger {
     display: none;
