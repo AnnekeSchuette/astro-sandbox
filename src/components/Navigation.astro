@@ -1,35 +1,26 @@
 ---
-import NavigationLink, { type NavLink } from './NavigationLink.astro';
+import NavigationLink, { type NavLink } from './NavigationLink.astro'
 
 interface Props {
-  navList: NavLink[];
+  navList: NavLink[]
 }
 
-const { navList } = Astro.props;
+const { navList } = Astro.props
 ---
 
-<nav class='mainnav'>
+<nav class="mainnav">
   <ul>
     {
       navList.map((item) => (
-        <NavigationLink
-          title={item.title}
-          label={item.label}
-          url={item.url}
-          ariaLabel={item.ariaLabel}
-        />
+        <li>
+          <NavigationLink
+            title={item.title}
+            label={item.label}
+            url={item.url}
+            ariaLabel={item.ariaLabel}
+          />
+        </li>
       ))
     }
   </ul>
 </nav>
-<style>
-  .mainnav {
-    ul {
-      li {
-        a {
-          color: teal;
-        }
-      }
-    }
-  }
-</style>

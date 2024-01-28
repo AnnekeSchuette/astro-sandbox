@@ -1,0 +1,21 @@
+---
+import Social from './Social.astro'
+
+const username = 'AnnekeSchuette'
+---
+
+<footer>
+  <div class="footer__content">
+    Follow with me on <br />
+    <Social platform="github" username={username} />
+    <Social platform="twitter" username={username} />
+    <Social platform="youtube" username={username} />
+  </div>
+</footer>
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
