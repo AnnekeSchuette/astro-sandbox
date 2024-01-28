@@ -1,0 +1,14 @@
+---
+export interface NavLink {
+  title: string;
+  label: string;
+  url: string;
+  ariaLabel: string;
+}
+
+const { title, label, url, ariaLabel } = Astro.props as NavLink;
+---
+
+<a href={url} aria-label={ariaLabel || title} title={title}>
+  {label}
+</a>

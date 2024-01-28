@@ -1,0 +1,26 @@
+---
+import Navigation from './Navigation.astro';
+
+const mainNavigation = [
+  {
+    title: 'Home',
+    label: 'Home',
+    url: '/',
+    ariaLabel: '',
+  },
+  {
+    title: 'About Me',
+    label: 'About',
+    url: '/about/',
+    ariaLabel: 'about me',
+  },
+  {
+    title: 'See my articles',
+    label: 'Blog',
+    url: '/blog/',
+    ariaLabel: '',
+  },
+];
+---
+
+<Navigation navList={mainNavigation} />
