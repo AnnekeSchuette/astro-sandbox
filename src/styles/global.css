@@ -45,9 +45,8 @@ h1 {
 
 /* nav styles */
 .hamburger {
-  padding-right: 20px;
   cursor: pointer;
-  padding: 1rem;
+  padding: 1rem 20px;
 }
 
 .hamburger .line {
@@ -94,22 +93,24 @@ h1 {
     position: static;
     background: none;
     margin: 0 auto;
+
+    ul {
+       li {
+        width: auto;
+        display: inline-flex;
+        flex-direction: column;
+        padding: 0 1rem;
+        border-right: 1px solid #f08868;
+
+        &:last-child {
+          border-right: none;
+        }
+      }
+
+    }
   }
 
-  .mainnav li {
-    display: inline-flex;
-    flex-direction: column;
-    padding: 0 1rem;
-    border-right: 1px solid #888;
 
-    &:first-child {
-      padding-left: 0;
-    }
-    &:last-child {
-      padding-right: 0;
-      border-right: none;
-    }
-  }
   .hamburger {
     display: none;
   }

@@ -4,6 +4,7 @@ import Header from '../components/Header.astro'
 import '../styles/global.css'
 import { ViewTransitions } from 'astro:transitions';
 
+
 const pageTitle = 'My Astro Site'
 ---
 
@@ -14,16 +15,34 @@ const pageTitle = 'My Astro Site'
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+    <link rel="stylesheet" href="../../node_modules/@dietechniker/ds-web-components/dist/themes/light.css" />
+
+    <script type="module" data-tkds="../../node_modules/@dietechniker/ds-web-components/dist/">
+      import '../../node_modules/@dietechniker/ds-web-components/dist/components/button/button.js';
+
+      // <tk-button> is ready to use!
+    </script>
+
+
     <ViewTransitions />
   </head>
   <body>
     <Header />
     <main>
       <h1>{pageTitle}</h1>
+    <tk-button size="large" >Click me</tk-button>
     </main>
     <Footer />
     <script>
       import '../scripts/menu.js'
+
+      const testButton = document.querySelector("tk-button");
+      testButton?.addEventListener('click', event => {
+        console.log("Button clicked!");
+      });
+      function handleButtonClick() {
+        console.log("Button clicked!");
+      }
     </script>
   </body>
 </html>

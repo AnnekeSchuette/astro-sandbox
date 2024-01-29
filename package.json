@@ -10,8 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.2.6",
     "@astrojs/check": "^0.4.1",
+    "@dietechniker/ds-web-components": "^1.0.0",
+    "@types/react": "18",
+    "astro": "^4.2.6",
     "typescript": "^5.3.3"
   }
 }
